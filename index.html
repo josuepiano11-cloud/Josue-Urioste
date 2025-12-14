@@ -12,222 +12,237 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root{
+      /* Inspirado en la estética del manual (papel cálido + verdes + terracota) */
+      --bg: #F6F2E8;          /* papel */
+      --bg2:#FBF8F0;          /* papel claro */
+      --card:#FFFCF6;         /* tarjeta */
+      --ink:#1F2937;          /* texto */
+      --muted:#5B6470;        /* texto secundario */
+      --line:#E6E0D2;         /* líneas */
+      --green:#2F5B3A;        /* verde bambú oscuro */
+      --olive:#7A8F3A;        /* oliva */
+      --sage:#AEBB86;         /* verde suave */
+      --terra:#B85A3B;        /* terracota */
+      --shadow: 0 10px 30px rgba(20, 30, 20, .08);
+    }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
     html { scroll-behavior: smooth; }
     .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .card { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { filter: brightness(.95); }
+    .btn-outline { border: 1px solid var(--line); background: rgba(255,255,255,.45); }
+    .btn-outline:hover { background: rgba(255,255,255,.75); }
+    .chip { border: 1px solid var(--line); background: rgba(255,255,255,.55); }
+    .active-filter { background: var(--green) !important; color: #fff !important; border-color: var(--green) !important; }
   </style>
 </head>
 
-<body class="bg-white text-slate-900">
+<body style="background:var(--bg); color:var(--ink);">
 
   <!-- NAV -->
-  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/85 glass">
+  <header class="sticky top-0 z-50 glass" style="background:rgba(246,242,232,.82); border-bottom:1px solid var(--line);">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="font-semibold tracking-tight">Josué Urioste</a>
+      <a href="#top" class="font-semibold tracking-tight" style="color:var(--green);">Josué Urioste</a>
 
-      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
-        <a class="hover:text-slate-900" href="#portfolio">Portafolio</a>
-        <a class="hover:text-slate-900" href="#bio">Perfil</a>
-        <a class="hover:text-slate-900" href="#trayectoria">Trayectoria</a>
-        <a class="hover:text-slate-900" href="#premios">Premios</a>
-        <a class="hover:text-slate-900" href="#contacto">Contacto</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted);">
+        <a class="hover:opacity-80" href="#portfolio">Portafolio</a>
+        <a class="hover:opacity-80" href="#bio">Perfil</a>
+        <a class="hover:opacity-80" href="#trayectoria">Trayectoria</a>
+        <a class="hover:opacity-80" href="#premios">Premios</a>
+        <a class="hover:opacity-80" href="#contacto">Contacto</a>
       </nav>
 
-      <a href="#contacto" class="inline-flex items-center rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-slate-800">
+      <a href="#contacto" class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium shadow-sm btn-primary">
         Contacto
       </a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="top" class="bg-slate-50 border-b border-slate-200">
+  <section id="top" style="background:linear-gradient(180deg,var(--bg2),var(--bg)); border-bottom:1px solid var(--line);">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <div class="grid gap-10 md:grid-cols-2 md:items-center">
+
         <div>
-          <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600">
-            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+          <p class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs chip">
+            <span class="h-2 w-2 rounded-full" style="background:var(--olive);"></span>
             Pianista boliviano · Música clásica · Docente
           </p>
 
-          <h1 class="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">Josué Urioste Mancilla</h1>
+          <h1 class="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
+            Josué Urioste Mancilla
+          </h1>
 
-          <p class="mt-4 text-lg leading-relaxed text-slate-700">
+          <p class="mt-4 text-lg leading-relaxed" style="color:var(--ink);">
             Soy pianista porque en la música encontré un lenguaje que trasciende la palabra.
           </p>
 
-          <p class="mt-4 text-slate-600 leading-relaxed">
+          <p class="mt-4 leading-relaxed" style="color:var(--muted);">
             Intérprete y docente con formación académica y participación activa en concursos, festivales y proyectos artísticos.
           </p>
 
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="#portfolio" class="inline-flex justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-slate-800">
+            <a href="#portfolio" class="inline-flex justify-center rounded-2xl px-5 py-3 text-sm font-medium shadow-sm btn-primary">
               Ver portafolio
             </a>
-            <a href="#trayectoria" class="inline-flex justify-center rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50">
+            <a href="#trayectoria" class="inline-flex justify-center rounded-2xl px-5 py-3 text-sm font-medium btn-outline">
               Ver trayectoria
             </a>
           </div>
 
           <div class="mt-6 grid gap-3 sm:grid-cols-2">
-            <div class="rounded-2xl border border-slate-200 bg-white p-4">
-              <p class="text-xs text-slate-500">Ubicación</p>
+            <div class="rounded-2xl p-4 card">
+              <p class="text-xs" style="color:var(--muted);">Ubicación</p>
               <p class="mt-1 text-sm font-medium">Cochabamba – Bolivia</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-4">
-              <p class="text-xs text-slate-500">Contacto</p>
+            <div class="rounded-2xl p-4 card">
+              <p class="text-xs" style="color:var(--muted);">Contacto</p>
               <p class="mt-1 text-sm font-medium">+591 68637826 · josue.piano11@gmail.com</p>
             </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2 text-xs" style="color:var(--muted);">
+            <span class="rounded-full px-3 py-1 chip">Conciertos</span>
+            <span class="rounded-full px-3 py-1 chip">Festivales</span>
+            <span class="rounded-full px-3 py-1 chip">Docencia</span>
+            <span class="rounded-full px-3 py-1 chip">Proyectos culturales</span>
           </div>
         </div>
 
         <div class="relative">
-          <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-            <img
-              src="images/hero.jpg"
-              alt="Josué Urioste Mancilla en concierto"
-              class="h-[520px] w-full object-cover"
-            />
+          <div class="overflow-hidden rounded-3xl card">
+            <img src="images/hero.jpg" alt="Josué Urioste Mancilla en concierto" class="h-[520px] w-full object-cover" />
           </div>
-          <div class="absolute -bottom-4 -left-4 rounded-3xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-            <p class="text-xs text-slate-500">Disponibilidad</p>
-            <p class="text-sm font-semibold">Conciertos · Clases · Proyectos culturales</p>
+
+          <!-- Acento terracota -->
+          <div class="absolute -bottom-4 -left-4 rounded-3xl px-4 py-3 card">
+            <p class="text-xs" style="color:var(--muted);">Disponibilidad</p>
+            <p class="text-sm font-semibold" style="color:var(--terra);">Conciertos · Clases · Colaboraciones</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- DESTACADOS (portfolio recomendado) -->
+  <!-- DESTACADOS -->
   <section class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold tracking-tight">Destacados</h2>
-    <p class="mt-2 text-sm text-slate-600">Una mirada rápida a lo más fuerte (curaduría: menos es más).</p>
+    <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Destacados</h2>
+    <p class="mt-2 text-sm" style="color:var(--muted);">Curaduría: lo esencial primero.</p>
 
     <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-xs text-slate-500">Internacional</p>
+      <div class="rounded-3xl p-6 card">
+        <p class="text-xs" style="color:var(--muted);">Internacional</p>
         <p class="mt-2 font-semibold">Finalista · Pianistas Jóvenes (Colombia)</p>
-        <p class="mt-2 text-sm text-slate-700">Mención de Honor · 2024</p>
+        <p class="mt-2 text-sm" style="color:var(--muted);">Mención de Honor · 2024</p>
       </div>
 
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-xs text-slate-500">Premios</p>
+      <div class="rounded-3xl p-6 card">
+        <p class="text-xs" style="color:var(--muted);">Premios</p>
         <p class="mt-2 font-semibold">Primeros lugares (2019–2020)</p>
-        <p class="mt-2 text-sm text-slate-700">Eduardo Caba · Festival Hernán Rivera Unzueta</p>
+        <p class="mt-2 text-sm" style="color:var(--muted);">Eduardo Caba · Hernán Rivera Unzueta</p>
       </div>
 
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-xs text-slate-500">Docencia</p>
+      <div class="rounded-3xl p-6 card">
+        <p class="text-xs" style="color:var(--muted);">Docencia</p>
         <p class="mt-2 font-semibold">Profesor de piano</p>
-        <p class="mt-2 text-sm text-slate-700">Desde 2019 · niños, jóvenes y adultos</p>
+        <p class="mt-2 text-sm" style="color:var(--muted);">Desde 2019 · niños, jóvenes y adultos</p>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO: GALERÍA CON FILTROS + CONTEXTO -->
-  <section id="portfolio" class="border-t border-slate-200 bg-slate-50">
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="border-top:1px solid var(--line); background:var(--bg2);">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 class="text-2xl font-semibold tracking-tight">Portafolio</h2>
-          <p class="mt-2 text-sm text-slate-600">Concursos · Conciertos · Docencia (clic para ver en grande).</p>
+          <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Portafolio</h2>
+          <p class="mt-2 text-sm" style="color:var(--muted);">Concursos · Conciertos · Docencia (clic para ampliar).</p>
         </div>
 
         <div class="flex flex-wrap gap-2">
-          <button data-filter="all" class="filter-btn rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100">
-            Todo
-          </button>
-          <button data-filter="concurso" class="filter-btn rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100">
-            Concursos
-          </button>
-          <button data-filter="concierto" class="filter-btn rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100">
-            Conciertos
-          </button>
-          <button data-filter="docencia" class="filter-btn rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100">
-            Docencia
-          </button>
+          <button data-filter="all" class="filter-btn rounded-2xl px-4 py-2 text-sm font-medium btn-outline">Todo</button>
+          <button data-filter="concurso" class="filter-btn rounded-2xl px-4 py-2 text-sm font-medium btn-outline">Concursos</button>
+          <button data-filter="concierto" class="filter-btn rounded-2xl px-4 py-2 text-sm font-medium btn-outline">Conciertos</button>
+          <button data-filter="docencia" class="filter-btn rounded-2xl px-4 py-2 text-sm font-medium btn-outline">Docencia</button>
         </div>
       </div>
 
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="grid">
+
         <!-- CONCURSOS -->
-        <figure class="card concurso rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concurso-1.jpg"
-                data-caption="Concurso / Festival · (Ciudad, Año) — Ajusta este texto">
+        <figure class="cardItem concurso rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concurso-1.jpg" data-caption="Concurso · (Ciudad, Año)">
           <img src="images/concurso-1.jpg" class="h-56 w-full object-cover" alt="Concurso 1">
-          <figcaption class="p-4 text-xs text-slate-600">Concurso / Festival · (Ciudad, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concurso · (Ciudad, Año)</figcaption>
         </figure>
 
-        <figure class="card concurso rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concurso-2.jpg"
-                data-caption="Concurso / Festival · (Ciudad, Año) — Ajusta este texto">
+        <figure class="cardItem concurso rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concurso-2.jpg" data-caption="Concurso · (Ciudad, Año)">
           <img src="images/concurso-2.jpg" class="h-56 w-full object-cover" alt="Concurso 2">
-          <figcaption class="p-4 text-xs text-slate-600">Concurso / Festival · (Ciudad, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concurso · (Ciudad, Año)</figcaption>
         </figure>
 
-        <figure class="card concurso rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concurso-3.jpg"
-                data-caption="Concurso / Festival · (Ciudad, Año) — Ajusta este texto">
+        <figure class="cardItem concurso rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concurso-3.jpg" data-caption="Concurso · (Ciudad, Año)">
           <img src="images/concurso-3.jpg" class="h-56 w-full object-cover" alt="Concurso 3">
-          <figcaption class="p-4 text-xs text-slate-600">Concurso / Festival · (Ciudad, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concurso · (Ciudad, Año)</figcaption>
         </figure>
 
         <!-- CONCIERTOS -->
-        <figure class="card concierto rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concierto-1.jpg"
-                data-caption="Concierto / Recital · (Lugar, Año) — Ajusta este texto">
+        <figure class="cardItem concierto rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concierto-1.jpg" data-caption="Concierto / Recital · (Lugar, Año)">
           <img src="images/concierto-1.jpg" class="h-56 w-full object-cover" alt="Concierto 1">
-          <figcaption class="p-4 text-xs text-slate-600">Concierto / Recital · (Lugar, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concierto / Recital · (Lugar, Año)</figcaption>
         </figure>
 
-        <figure class="card concierto rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concierto-2.jpg"
-                data-caption="Concierto / Recital · (Lugar, Año) — Ajusta este texto">
+        <figure class="cardItem concierto rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concierto-2.jpg" data-caption="Concierto / Recital · (Lugar, Año)">
           <img src="images/concierto-2.jpg" class="h-56 w-full object-cover" alt="Concierto 2">
-          <figcaption class="p-4 text-xs text-slate-600">Concierto / Recital · (Lugar, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concierto / Recital · (Lugar, Año)</figcaption>
         </figure>
 
-        <figure class="card concierto rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concierto-3.jpg"
-                data-caption="Concierto / Festival · (Lugar, Año) — Ajusta este texto">
+        <figure class="cardItem concierto rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concierto-3.jpg" data-caption="Concierto / Festival · (Lugar, Año)">
           <img src="images/concierto-3.jpg" class="h-56 w-full object-cover" alt="Concierto 3">
-          <figcaption class="p-4 text-xs text-slate-600">Concierto / Festival · (Lugar, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concierto / Festival · (Lugar, Año)</figcaption>
         </figure>
 
-        <figure class="card concierto rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/concierto-4.jpg"
-                data-caption="Concierto / Evento · (Lugar, Año) — Ajusta este texto">
+        <figure class="cardItem concierto rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/concierto-4.jpg" data-caption="Concierto / Evento · (Lugar, Año)">
           <img src="images/concierto-4.jpg" class="h-56 w-full object-cover" alt="Concierto 4">
-          <figcaption class="p-4 text-xs text-slate-600">Concierto / Evento · (Lugar, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Concierto / Evento · (Lugar, Año)</figcaption>
         </figure>
 
         <!-- DOCENCIA -->
-        <figure class="card docencia rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/docencia-1.jpg"
-                data-caption="Docencia · Clase / Concierto pedagógico · (Ciudad, Año) — Ajusta este texto">
+        <figure class="cardItem docencia rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/docencia-1.jpg" data-caption="Docencia · Clase / Concierto pedagógico · (Ciudad, Año)">
           <img src="images/docencia-1.jpg" class="h-56 w-full object-cover" alt="Docencia 1">
-          <figcaption class="p-4 text-xs text-slate-600">Docencia · (Ciudad, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Docencia · (Ciudad, Año)</figcaption>
         </figure>
 
-        <figure class="card docencia rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm cursor-pointer"
-                data-src="images/docencia-2.jpg"
-                data-caption="Docencia · Estudiantes · (Ciudad, Año) — Ajusta este texto">
+        <figure class="cardItem docencia rounded-3xl overflow-hidden card cursor-pointer"
+          data-src="images/docencia-2.jpg" data-caption="Docencia · Estudiantes · (Ciudad, Año)">
           <img src="images/docencia-2.jpg" class="h-56 w-full object-cover" alt="Docencia 2">
-          <figcaption class="p-4 text-xs text-slate-600">Docencia · (Ciudad, Año)</figcaption>
+          <figcaption class="p-4 text-xs" style="color:var(--muted);">Docencia · (Ciudad, Año)</figcaption>
         </figure>
+
       </div>
     </div>
   </section>
 
-  <!-- BIO (tu texto profesional) -->
+  <!-- BIO -->
   <section id="bio" class="mx-auto max-w-6xl px-4 py-12">
     <div class="grid gap-8 md:grid-cols-3">
       <div>
-        <h2 class="text-2xl font-semibold tracking-tight">Perfil profesional</h2>
-        <p class="mt-2 text-sm text-slate-600">Texto breve, útil para instituciones.</p>
+        <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Perfil profesional</h2>
+        <p class="mt-2 text-sm" style="color:var(--muted);">Texto útil para instituciones.</p>
       </div>
       <div class="md:col-span-2">
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <p class="text-slate-700 leading-relaxed">
+        <div class="rounded-3xl p-7 card">
+          <p class="leading-relaxed" style="color:var(--ink);">
             Josué Urioste Mancilla es un pianista boliviano dedicado a la interpretación de música clásica, la música de cámara y la pedagogía pianística. Su formación combina una sólida base académica con una activa participación en concursos, festivales y proyectos artísticos a nivel nacional e internacional. Desarrolla paralelamente una labor constante como intérprete y docente, promoviendo la formación musical y la difusión del repertorio pianístico.
           </p>
         </div>
@@ -235,56 +250,48 @@
     </div>
   </section>
 
-  <!-- TRAYECTORIA / CV (resumido, con jerarquía) -->
-  <section id="trayectoria" class="border-t border-slate-200 bg-slate-50">
+  <!-- TRAYECTORIA -->
+  <section id="trayectoria" style="border-top:1px solid var(--line); background:var(--bg2);">
     <div class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold tracking-tight">Formación y trayectoria</h2>
-      <p class="mt-2 text-sm text-slate-600">Resumen curado (sin saturar).</p>
+      <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Formación y trayectoria</h2>
+      <p class="mt-2 text-sm" style="color:var(--muted);">Resumen claro, sin saturar.</p>
 
       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <h3 class="font-semibold">Formación musical</h3>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+        <div class="rounded-3xl p-7 card">
+          <h3 class="font-semibold" style="color:var(--terra);">Formación musical</h3>
+          <ul class="mt-4 space-y-2 text-sm" style="color:var(--ink);">
             <li><strong>Licenciatura en Música</strong> — UMSS, Cochabamba (2021–2024)</li>
             <li><strong>Conservatorio de Música de Sucre</strong> (2019–2021)</li>
             <li><strong>Taller Universitario de Piano</strong> — USFX (2015–2019). Maestro <strong>Isaac Kuno Mamani</strong>.</li>
           </ul>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <h3 class="font-semibold">Maestros y clases magistrales</h3>
-          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-700">
-            <span>Beatrice Lupi (Suiza)</span>
-            <span>Natalya Shakhmatova (Ucrania)</span>
-            <span>Emilio Alís</span>
-            <span>Adriana Inturias</span>
-            <span>Mariana Alandia</span>
-            <span>Francesco Paganini (Italia)</span>
-            <span>Michael Varon (EE. UU.)</span>
-            <span>Daniel Añez (Canadá)</span>
-            <span>Luca Chiantore (Italia)</span>
-            <span>Ernesto Oliva (Cuba)</span>
-            <span>Erika Ribeiro (Brasil)</span>
-            <span>Argentina Durán (México)</span>
-            <span>Sergio Escalera</span>
-            <span>Lizzel Claros</span>
-            <span>Noelia Morón</span>
-            <span>Rosalía Capote (Cuba)</span>
+        <div class="rounded-3xl p-7 card">
+          <h3 class="font-semibold" style="color:var(--terra);">Maestros y clases magistrales</h3>
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm" style="color:var(--ink);">
+            <span>Beatrice Lupi (Suiza)</span><span>Natalya Shakhmatova (Ucrania)</span>
+            <span>Emilio Alís</span><span>Adriana Inturias</span>
+            <span>Mariana Alandia</span><span>Francesco Paganini (Italia)</span>
+            <span>Michael Varon (EE. UU.)</span><span>Daniel Añez (Canadá)</span>
+            <span>Luca Chiantore (Italia)</span><span>Ernesto Oliva (Cuba)</span>
+            <span>Erika Ribeiro (Brasil)</span><span>Argentina Durán (México)</span>
+            <span>Sergio Escalera</span><span>Lizzel Claros</span>
+            <span>Noelia Morón</span><span>Rosalía Capote (Cuba)</span>
           </div>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <h3 class="font-semibold">Experiencia artística</h3>
-          <ul class="mt-4 list-disc pl-5 space-y-2 text-sm text-slate-700">
+        <div class="rounded-3xl p-7 card">
+          <h3 class="font-semibold" style="color:var(--terra);">Experiencia artística</h3>
+          <ul class="mt-4 list-disc pl-5 space-y-2 text-sm" style="color:var(--ink);">
             <li>Pianista solista en recitales académicos y conciertos culturales.</li>
             <li>Integrante de ensambles de cámara y agrupaciones sinfónicas en Sucre y Cochabamba.</li>
-            <li>Eventos institucionales y culturales; ceremonias y eventos privados.</li>
+            <li>Eventos institucionales, culturales y privados.</li>
           </ul>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <h3 class="font-semibold">Experiencia docente</h3>
-          <ul class="mt-4 list-disc pl-5 space-y-2 text-sm text-slate-700">
+        <div class="rounded-3xl p-7 card">
+          <h3 class="font-semibold" style="color:var(--terra);">Experiencia docente</h3>
+          <ul class="mt-4 list-disc pl-5 space-y-2 text-sm" style="color:var(--ink);">
             <li>Docente de piano desde <strong>2019</strong>.</li>
             <li>Clases individuales para niños, jóvenes y adultos.</li>
             <li>Metodologías personalizadas por edad y nivel.</li>
@@ -297,63 +304,47 @@
 
   <!-- PREMIOS -->
   <section id="premios" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold tracking-tight">Premios y distinciones</h2>
-    <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-      <ul class="space-y-2 text-sm text-slate-700">
+    <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Premios y distinciones</h2>
+
+    <div class="mt-6 rounded-3xl p-7 card">
+      <ul class="space-y-2 text-sm" style="color:var(--ink);">
         <li><strong>2019:</strong> Primer lugar, Concurso de Piano “Eduardo Caba”, Sucre.</li>
-        <li><strong>2019:</strong> Primer lugar (Juvenil), Festival Nacional de Piano “Hernán Rivera Unzueta”, Totora.</li>
-        <li><strong>2020:</strong> Primer lugar (Juvenil), Festival “Hernán Rivera Unzueta” (versión virtual).</li>
+        <li><strong>2019:</strong> Primer lugar (Juvenil), Festival “Hernán Rivera Unzueta”, Totora.</li>
+        <li><strong>2020:</strong> Primer lugar (Juvenil), Festival (versión virtual).</li>
         <li><strong>2021:</strong> Segundo lugar (Mayores), Festival “Hernán Rivera Unzueta”.</li>
         <li><strong>2022:</strong> Reconocimiento UMSS por producción artística y cultural.</li>
-        <li><strong>2023:</strong> Seleccionado entre 20 jóvenes promesas, Festival <em>Música para Respirar</em>, Sucre.</li>
+        <li><strong>2023:</strong> Seleccionado entre 20 jóvenes promesas, Festival <em>Música para Respirar</em>.</li>
         <li><strong>2024:</strong> Mención de Honor y Finalista, Concurso Internacional <em>Pianistas Jóvenes</em>, Colombia.</li>
       </ul>
-    </div>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-2">
-      <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-        <h3 class="font-semibold">Líneas de interés</h3>
-        <ul class="mt-4 list-disc pl-5 space-y-2 text-sm text-slate-700">
-          <li>Interpretación pianística solista.</li>
-          <li>Música de cámara y trabajo en ensamble.</li>
-          <li>Pedagogía musical y formación pianística.</li>
-          <li>Difusión del repertorio clásico y latinoamericano.</li>
-        </ul>
-      </div>
-
-      <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-        <h3 class="font-semibold">Idiomas</h3>
-        <p class="mt-3 text-sm text-slate-700">Español (lengua materna).</p>
-      </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="border-t border-slate-200 bg-slate-50">
+  <section id="contacto" style="border-top:1px solid var(--line); background:var(--bg2);">
     <div class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold tracking-tight">Contacto</h2>
-      <p class="mt-2 text-sm text-slate-600">Para conciertos, clases o colaboraciones (incluye fecha, ciudad y tipo de evento).</p>
+      <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--green);">Contacto</h2>
+      <p class="mt-2 text-sm" style="color:var(--muted);">Para conciertos, clases o colaboraciones (incluye fecha, ciudad y tipo de evento).</p>
 
       <div class="mt-6 grid gap-4 md:grid-cols-3">
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-xs text-slate-500">Teléfono / WhatsApp</p>
+        <div class="rounded-3xl p-6 card">
+          <p class="text-xs" style="color:var(--muted);">Teléfono / WhatsApp</p>
           <p class="mt-2 font-semibold">+591 68637826</p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-xs text-slate-500">Correo</p>
+        <div class="rounded-3xl p-6 card">
+          <p class="text-xs" style="color:var(--muted);">Correo</p>
           <p class="mt-2 font-semibold">
-            <a class="underline decoration-slate-300 hover:decoration-slate-900" href="mailto:josue.piano11@gmail.com">josue.piano11@gmail.com</a>
+            <a class="underline" style="text-decoration-color:var(--sage);" href="mailto:josue.piano11@gmail.com">josue.piano11@gmail.com</a>
           </p>
         </div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-xs text-slate-500">Disponibilidad</p>
-          <p class="mt-2 text-sm text-slate-700">Nacional e internacional · proyectos culturales y educativos</p>
+        <div class="rounded-3xl p-6 card">
+          <p class="text-xs" style="color:var(--muted);">Disponibilidad</p>
+          <p class="mt-2 text-sm" style="color:var(--ink);">Nacional e internacional · proyectos culturales y educativos</p>
         </div>
       </div>
 
-      <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> Josué Urioste Mancilla</p>
+      <p class="mt-8 text-xs" style="color:var(--muted);">© <span id="y"></span> Josué Urioste Mancilla</p>
     </div>
   </section>
 
@@ -362,7 +353,7 @@
     <div class="max-w-5xl w-full">
       <div class="flex items-center justify-between mb-3">
         <p id="lightboxCaption" class="text-sm text-white/90"></p>
-        <button id="closeLightbox" class="rounded-xl bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20">
+        <button id="closeLightbox" class="rounded-xl px-4 py-2 text-sm text-white" style="background:rgba(255,255,255,.16);">
           Cerrar
         </button>
       </div>
@@ -371,16 +362,15 @@
   </div>
 
   <script>
-    // year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // filter
+    // filtros
     const btns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.cardItem');
 
-    function setActive(btn) {
-      btns.forEach(b => b.classList.remove('bg-slate-900','text-white','border-slate-900'));
-      btn.classList.add('bg-slate-900','text-white','border-slate-900');
+    function setActive(btn){
+      btns.forEach(b => b.classList.remove('active-filter'));
+      btn.classList.add('active-filter');
     }
     setActive(document.querySelector('[data-filter="all"]'));
 
@@ -410,7 +400,7 @@
       });
     });
 
-    function closeLightbox() {
+    function closeLightbox(){
       lightbox.classList.add('hidden');
       lightbox.classList.remove('flex');
       lightboxImg.src = '';
