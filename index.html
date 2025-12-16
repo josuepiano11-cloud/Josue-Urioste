@@ -37,54 +37,37 @@
 
 <body>
 
-  <!-- HERO (foto + panel granate a la derecha) -->
-  <section id="top" class="min-h-[78vh] border-b softline">
-    <div class="grid lg:grid-cols-2">
-      <!-- Imagen grande -->
-      <div class="relative">
-        <img src="images/hero.jpg" alt="Josué Urioste Mancilla en concierto"
-             class="h-[78vh] w-full object-cover" />
-        <div class="absolute inset-0 bg-black/35"></div>
-      </div>
+ <!-- HERO / PORTADA -->
+<section id="top" class="min-h-[80vh] border-b softline">
+  <div class="grid lg:grid-cols-2">
 
-      <!-- Panel granate -->
-      <div class="panel2 px-6 py-10 lg:px-12 lg:py-14 flex flex-col justify-between">
-        <div>
-          <p class="text-xs tracking-[0.25em] uppercase text-white/80">Portafolio</p>
-
-          <h1 class="mt-4 text-5xl leading-[0.95] font-semibold">
-            Josué<br/>Urioste<br/>Mancilla
-          </h1>
-
-          <p class="mt-5 text-lg text-white/90">Pianista boliviano</p>
-          <div class="mt-6 h-px w-24 bg-white/60"></div>
-
-          <p class="mt-6 text-sm leading-relaxed text-white/90 max-w-md">
-            Pianista dedicado a la interpretación de música clásica, música de cámara y pedagogía pianística.
-            Mi trabajo combina formación académica, actividad concertística y docencia.
-          </p>
-
-          <div class="mt-6 flex flex-wrap gap-2 text-xs">
-            <span class="tag rounded-full px-3 py-1">Concursos</span>
-            <span class="tag rounded-full px-3 py-1">Conciertos</span>
-            <span class="tag rounded-full px-3 py-1">Docencia</span>
-            <span class="tag rounded-full px-3 py-1">Bolivia · Internacional</span>
-          </div>
-
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#galeria" class="btn rounded-2xl px-4 py-2 text-sm font-medium">Ver galería</a>
-            <a href="#contacto" class="btn rounded-2xl px-4 py-2 text-sm font-medium">Contacto</a>
-          </div>
-        </div>
-
-        <div class="text-xs text-white/85 space-y-1 mt-10">
-          <p>📍 Cochabamba – Bolivia</p>
-          <p>📞 +591 68637826</p>
-          <p>✉️ <a class="underline underline-offset-4" href="mailto:josue.piano11@gmail.com">josue.piano11@gmail.com</a></p>
-        </div>
-      </div>
+    <!-- Imagen -->
+    <div class="relative">
+      <img src="images/hero.jpg" alt="Josué Urioste, pianista"
+           class="h-[80vh] w-full object-cover" />
+      <div class="absolute inset-0 bg-black/35"></div>
     </div>
-  </section>
+
+    <!-- Panel granate -->
+    <div class="panel px-6 py-10 lg:px-16 lg:py-20 flex flex-col justify-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-white/80">
+        Portafolio
+      </p>
+
+      <h1 class="mt-4 text-6xl lg:text-7xl leading-[1] font-semibold">
+        Josué<br>Urioste
+      </h1>
+
+      <p class="mt-4 text-lg tracking-wide text-white/90">
+        Pianista
+      </p>
+
+      <div class="mt-6 h-px w-24 bg-white/70"></div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- NAV simple (dossier style) -->
   <header class="sticky top-0 z-40 bg-black/70 backdrop-blur border-b softline">
