@@ -1,110 +1,101 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Josué Urioste Mancilla · Pianista</title>
-  <meta name="description" content="Portafolio profesional de Josué Urioste Mancilla: biografía, concursos, conciertos, docencia y contacto." />
+  <meta charset="utf-8">
+  <title>Josué Urioste · Pianista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Estilo “dossier”: títulos con serif + cuerpo limpio -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root{
-      /* Inspirado en el dossier (panel granate + negro + blanco) */
-      --wine: #8f1d2c;     /* granate/rojo vino */
-      --wine2:#a32637;     /* acento */
-      --ink:  #0b0b0c;     /* casi negro */
-      --paper:#f6f3ef;     /* blanco cálido */
-      --muted:#a8a8a8;     /* gris tenue */
-      --line: rgba(255,255,255,.18);
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
     }
-    html { scroll-behavior:smooth; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--ink); color: white; }
-    h1,h2,h3 { font-family: "Playfair Display", serif; }
-    .panel { background: var(--wine); }
-    .panel2 { background: linear-gradient(180deg, var(--wine), var(--wine2)); }
-    .card { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); }
-    .softline { border-color: var(--line); }
-    .btn { border:1px solid rgba(255,255,255,.22); }
-    .btn:hover { background: rgba(255,255,255,.08); }
-    .tag { border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); }
+    .panel {
+      background-color: #8e1d2c; /* granate profesional */
+    }
+    .softline {
+      border-color: rgba(255,255,255,0.08);
+    }
   </style>
 </head>
 
-<body><!-- NAV (opciones) -->
+<body>
+
 <!-- MENÚ SUPERIOR -->
-<header class="sticky top-0 z-40 bg-black/70 backdrop-blur border-b softline">
-  <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
-    <a href="#top" class="font-semibold tracking-tight text-white">
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b softline">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="#top" class="font-semibold tracking-tight">
       Josué Urioste
     </a>
-
-    <nav class="flex gap-6 text-xs sm:text-sm tracking-wide text-white/85">
-      <a href="#biografia" class="hover:underline">Biografía</a>
-      <a href="#galeria" class="hover:underline">Galería</a>
-      <a href="#distinciones" class="hover:underline">Distinciones</a>
-      <a href="#contacto" class="hover:underline">Contacto</a>
+    <nav class="flex gap-6 text-sm tracking-wide text-white/80">
+      <a href="#biografia" class="hover:text-white">Biografía</a>
+      <a href="#galeria" class="hover:text-white">Galería</a>
+      <a href="#distinciones" class="hover:text-white">Distinciones</a>
+      <a href="#contacto" class="hover:text-white">Contacto</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO / PORTADA -->
-<section id="top" class="min-h-[90vh] border-b softline">
+<section id="top" class="min-h-[90vh] pt-16">
   <div class="grid lg:grid-cols-2 min-h-[90vh]">
 
     <!-- Imagen -->
     <div class="relative min-h-[90vh]">
-      <img src="images/hero.jpg" alt="Josué Urioste, pianista"
-           class="h-[90vh] w-full object-cover" />
-      <div class="absolute inset-0 bg-black/35"></div>
+      <img src="images/hero.jpg"
+           alt="Josué Urioste, pianista"
+           class="w-full h-[90vh] object-cover">
+      <div class="absolute inset-0 bg-black/30"></div>
     </div>
 
-    <!-- Panel granate -->
-    <div class="panel px-6 py-10 lg:px-16 lg:py-20 flex flex-col relative min-h-[90vh]">
+    <!-- Panel -->
+    <div class="panel relative flex flex-col px-8 py-12 lg:px-20 lg:py-24 min-h-[90vh]">
 
       <!-- PORTAFOLIO -->
-      <p class="text-xs tracking-[0.45em] uppercase text-white/80 mb-6"
-         style="font-family: 'Playfair Display', serif;">
+      <p class="text-[11px] tracking-[0.45em] uppercase text-white/80 mb-8"
+         style="font-family:'Playfair Display', serif;">
         Portafolio
       </p>
 
       <!-- NOMBRE -->
-      <h1 class="text-6xl lg:text-7xl leading-[1] font-semibold mb-4">
+      <h1 class="text-6xl lg:text-7xl leading-[1.05] font-semibold mb-6"
+          style="font-family:'Playfair Display', serif;">
         Josué<br>Urioste
       </h1>
 
-      <!-- Línea superior -->
-      <div class="w-56 h-px bg-white/70 mb-3"></div>
+      <!-- Línea -->
+      <div class="w-56 h-px bg-white/70 mb-4"></div>
 
-      <!-- PIANISTA -->
-      <p class="text-3xl lg:text-4xl font-medium tracking-wide text-white/95"
-         style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+      <!-- Pianista -->
+      <p class="text-3xl lg:text-4xl font-medium tracking-wide text-white/95 mb-4">
         Pianista
       </p>
 
-      <!-- Línea inferior -->
-      <div class="w-64 h-px bg-white/40 mt-3"></div>
+      <div class="w-64 h-px bg-white/40"></div>
 
-      <!-- DATOS ABAJO -->
-      <div class="absolute bottom-8 left-16 space-y-1 text-sm text-white/85">
+      <!-- Datos -->
+      <div class="absolute bottom-10 left-20 space-y-2 text-sm text-white/85">
         <p>📞 +591 68637826</p>
         <p>
-          ✉️ <a href="mailto:josue.piano11@gmail.com"
-                class="underline underline-offset-4">
-                josue.piano11@gmail.com
-              </a>
+          ✉️ <a href="mailto:josue.piano11@gmail.com" class="underline underline-offset-4">
+            josue.piano11@gmail.com
+          </a>
         </p>
         <p>
           🌐 <a href="https://josuepiano11-cloud.github.io/Josue-Urioste/"
                 target="_blank"
                 class="underline underline-offset-4">
-                josuepiano11-cloud.github.io/Josue-Urioste
-              </a>
+            josuepiano11-cloud.github.io/Josue-Urioste
+          </a>
         </p>
       </div>
 
@@ -112,236 +103,51 @@
   </div>
 </section>
 
-<!-- NAVEGACIÓN SECUNDARIA (SIN FONDO BLANCO) -->
-<section class="bg-transparent">
-  <div class="mx-auto max-w-6xl px-6 py-6">
-    <nav class="flex flex-wrap justify-center gap-8 text-sm tracking-wide text-white/90">
-      <a href="#biografia" class="hover:underline">Biografía</a>
-      <a href="#galeria" class="hover:underline">Galería</a>
-      <a href="#distinciones" class="hover:underline">Distinciones</a>
-      <a href="#contacto" class="hover:underline">Contacto</a>
-    </nav>
-  </div>
+<!-- NAVEGACIÓN SECUNDARIA -->
+<section class="py-8">
+  <nav class="flex justify-center gap-10 text-sm tracking-wide text-white/80">
+    <a href="#biografia" class="hover:underline">Biografía</a>
+    <a href="#galeria" class="hover:underline">Galería</a>
+    <a href="#distinciones" class="hover:underline">Distinciones</a>
+    <a href="#contacto" class="hover:underline">Contacto</a>
+  </nav>
 </section>
 
+<!-- BIOGRAFÍA -->
+<section id="biografia" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-semibold mb-6">Biografía</h2>
+  <p class="text-white/80 leading-relaxed">
+    Pianista boliviano con formación académica, dedicado a la interpretación de la música
+    clásica, la música de cámara y la difusión del repertorio latinoamericano y boliviano.
+    Su labor artística se complementa con una activa actividad pedagógica.
+  </p>
+</section>
 
-  <!-- GALERÍA con filtros + lightbox -->
-  <section id="galeria" class="mx-auto max-w-6xl px-4 py-12">
-    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <div>
-        <p class="text-xs tracking-[0.25em] uppercase text-white/70">Galería</p>
-        <h2 class="mt-3 text-3xl font-semibold">Concursos · Conciertos · Docencia</h2>
-        <p class="mt-2 text-sm text-white/70">Haz clic en una foto para verla en grande.</p>
-      </div>
+<!-- GALERÍA -->
+<section id="galeria" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-semibold mb-10">Galería</h2>
+  <p class="text-white/70">[Aquí irán tus fotografías]</p>
+</section>
 
-      <div class="flex flex-wrap gap-2">
-        <button data-filter="all" class="filter-btn btn rounded-2xl px-4 py-2 text-sm">Todo</button>
-        <button data-filter="concurso" class="filter-btn btn rounded-2xl px-4 py-2 text-sm">Concursos</button>
-        <button data-filter="concierto" class="filter-btn btn rounded-2xl px-4 py-2 text-sm">Conciertos</button>
-        <button data-filter="docencia" class="filter-btn btn rounded-2xl px-4 py-2 text-sm">Docencia</button>
-      </div>
-    </div>
+<!-- DISTINCIONES -->
+<section id="distinciones" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-semibold mb-6">Distinciones</h2>
+  <p class="text-white/70">[Premios, menciones, reconocimientos]</p>
+</section>
 
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="grid">
-      <!-- Concursos -->
-      <figure class="item concurso card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concurso-1.jpg" data-caption="Concurso · (Ciudad, Año)">
-        <img src="images/concurso-1.jpg" class="h-56 w-full object-cover" alt="Concurso 1">
-        <figcaption class="p-4 text-xs text-white/70">Concurso · (Ciudad, Año)</figcaption>
-      </figure>
+<!-- CONTACTO -->
+<section id="contacto" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-semibold mb-6">Contacto</h2>
+  <p class="text-white/70">
+    Para conciertos, proyectos artísticos o colaboraciones:
+    <br><br>
+    ✉️ <a href="mailto:josue.piano11@gmail.com" class="underline">josue.piano11@gmail.com</a>
+  </p>
+</section>
 
-      <figure class="item concurso card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concurso-2.jpg" data-caption="Concurso · (Ciudad, Año)">
-        <img src="images/concurso-2.jpg" class="h-56 w-full object-cover" alt="Concurso 2">
-        <figcaption class="p-4 text-xs text-white/70">Concurso · (Ciudad, Año)</figcaption>
-      </figure>
-
-      <figure class="item concurso card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concurso-3.jpg" data-caption="Concurso · (Ciudad, Año)">
-        <img src="images/concurso-3.jpg" class="h-56 w-full object-cover" alt="Concurso 3">
-        <figcaption class="p-4 text-xs text-white/70">Concurso · (Ciudad, Año)</figcaption>
-      </figure>
-
-      <!-- Conciertos -->
-      <figure class="item concierto card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concierto-1.jpg" data-caption="Concierto / Recital · (Lugar, Año)">
-        <img src="images/concierto-1.jpg" class="h-56 w-full object-cover" alt="Concierto 1">
-        <figcaption class="p-4 text-xs text-white/70">Concierto / Recital · (Lugar, Año)</figcaption>
-      </figure>
-
-      <figure class="item concierto card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concierto-2.jpg" data-caption="Concierto / Recital · (Lugar, Año)">
-        <img src="images/concierto-2.jpg" class="h-56 w-full object-cover" alt="Concierto 2">
-        <figcaption class="p-4 text-xs text-white/70">Concierto / Recital · (Lugar, Año)</figcaption>
-      </figure>
-
-      <figure class="item concierto card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concierto-3.jpg" data-caption="Concierto / Festival · (Lugar, Año)">
-        <img src="images/concierto-3.jpg" class="h-56 w-full object-cover" alt="Concierto 3">
-        <figcaption class="p-4 text-xs text-white/70">Concierto / Festival · (Lugar, Año)</figcaption>
-      </figure>
-
-      <figure class="item concierto card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/concierto-4.jpg" data-caption="Concierto / Evento · (Lugar, Año)">
-        <img src="images/concierto-4.jpg" class="h-56 w-full object-cover" alt="Concierto 4">
-        <figcaption class="p-4 text-xs text-white/70">Concierto / Evento · (Lugar, Año)</figcaption>
-      </figure>
-
-      <!-- Docencia -->
-      <figure class="item docencia card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/docencia-1.jpg" data-caption="Docencia · Clase / Concierto pedagógico · (Ciudad, Año)">
-        <img src="images/docencia-1.jpg" class="h-56 w-full object-cover" alt="Docencia 1">
-        <figcaption class="p-4 text-xs text-white/70">Docencia · (Ciudad, Año)</figcaption>
-      </figure>
-
-      <figure class="item docencia card rounded-3xl overflow-hidden cursor-pointer"
-              data-src="images/docencia-2.jpg" data-caption="Docencia · Estudiantes · (Ciudad, Año)">
-        <img src="images/docencia-2.jpg" class="h-56 w-full object-cover" alt="Docencia 2">
-        <figcaption class="p-4 text-xs text-white/70">Docencia · (Ciudad, Año)</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- TRAYECTORIA -->
-  <section id="trayectoria" class="panel border-y softline">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <p class="text-xs tracking-[0.25em] uppercase text-white/80">Trayectoria</p>
-      <h2 class="mt-3 text-3xl font-semibold">Formación · Docencia · Actividad artística</h2>
-
-      <div class="mt-8 grid gap-4 md:grid-cols-2">
-        <div class="card rounded-3xl p-7">
-          <h3 class="text-xl font-semibold">Formación musical</h3>
-          <ul class="mt-4 space-y-2 text-sm text-white/85">
-            <li><strong>Licenciatura en Música</strong> — UMSS, Cochabamba (2021–2024)</li>
-            <li><strong>Conservatorio de Música de Sucre</strong> (2019–2021)</li>
-            <li><strong>Taller Universitario de Piano</strong> — USFX (2015–2019). Maestro <strong>Isaac Kuno Mamani</strong>.</li>
-          </ul>
-        </div>
-
-        <div class="card rounded-3xl p-7">
-          <h3 class="text-xl font-semibold">Maestros y clases magistrales</h3>
-          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-white/85">
-            <span>Beatrice Lupi (Suiza)</span><span>Natalya Shakhmatova (Ucrania)</span>
-            <span>Emilio Alís</span><span>Adriana Inturias</span>
-            <span>Mariana Alandia</span><span>Francesco Paganini (Italia)</span>
-            <span>Michael Varon (EE. UU.)</span><span>Daniel Añez (Canadá)</span>
-            <span>Luca Chiantore (Italia)</span><span>Ernesto Oliva (Cuba)</span>
-            <span>Erika Ribeiro (Brasil)</span><span>Argentina Durán (México)</span>
-            <span>Sergio Escalera</span><span>Lizzel Claros</span>
-            <span>Noelia Morón</span><span>Rosalía Capote (Cuba)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PREMIOS -->
-  <section id="premios" class="mx-auto max-w-6xl px-4 py-12">
-    <p class="text-xs tracking-[0.25em] uppercase text-white/70">Premios</p>
-    <h2 class="mt-3 text-3xl font-semibold">Distinciones</h2>
-
-    <div class="mt-8 card rounded-3xl p-7">
-      <ul class="space-y-2 text-sm text-white/85">
-        <li><strong>2019:</strong> Primer lugar, Concurso de Piano “Eduardo Caba”, Sucre.</li>
-        <li><strong>2019:</strong> Primer lugar (Juvenil), Festival Nacional de Piano “Hernán Rivera Unzueta”, Totora.</li>
-        <li><strong>2020:</strong> Primer lugar (Juvenil), Festival “Hernán Rivera Unzueta” (versión virtual).</li>
-        <li><strong>2021:</strong> Segundo lugar (Mayores), Festival “Hernán Rivera Unzueta”.</li>
-        <li><strong>2022:</strong> Reconocimiento UMSS por compromiso y disciplina artística.</li>
-        <li><strong>2023:</strong> Seleccionado como joven promesa del Festival <em>Música para Respirar</em>, Sucre.</li>
-        <li><strong>2024:</strong> Mención de Honor y Finalista, Concurso Internacional <em>Pianistas Jóvenes</em>, Colombia.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACTO (estilo “página final de dossier”) -->
-  <section id="contacto" class="panel border-t softline">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <p class="text-xs tracking-[0.25em] uppercase text-white/80">Contacto</p>
-      <h2 class="mt-3 text-3xl font-semibold">Disponible para conciertos y proyectos</h2>
-
-      <div class="mt-8 grid gap-4 md:grid-cols-3">
-        <div class="card rounded-3xl p-6">
-          <p class="text-xs text-white/70">Teléfono / WhatsApp</p>
-          <p class="mt-2 font-semibold">+591 68637826</p>
-        </div>
-
-        <div class="card rounded-3xl p-6">
-          <p class="text-xs text-white/70">Correo</p>
-          <p class="mt-2 font-semibold">
-            <a class="underline underline-offset-4" href="mailto:josue.piano11@gmail.com">josue.piano11@gmail.com</a>
-          </p>
-        </div>
-
-        <div class="card rounded-3xl p-6">
-          <p class="text-xs text-white/70">Ubicación</p>
-          <p class="mt-2 text-sm text-white/85">Cochabamba – Bolivia</p>
-        </div>
-      </div>
-
-      <p class="mt-8 text-xs text-white/70">© <span id="y"></span> Josué Urioste Mancilla</p>
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4">
-    <div class="max-w-5xl w-full">
-      <div class="flex items-center justify-between mb-3">
-        <p id="lightboxCaption" class="text-sm text-white/90"></p>
-        <button id="closeLightbox" class="btn rounded-2xl px-4 py-2 text-sm text-white">Cerrar</button>
-      </div>
-      <img id="lightboxImg" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-2xl bg-black" />
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // filtros
-    const btns = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.item');
-
-    function setActive(btn){
-      btns.forEach(b => b.style.background = 'transparent');
-      btns.forEach(b => b.style.borderColor = 'rgba(255,255,255,.22)');
-      btn.style.background = 'rgba(255,255,255,.10)';
-    }
-    setActive(document.querySelector('[data-filter="all"]'));
-
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const f = btn.dataset.filter;
-        setActive(btn);
-        items.forEach(it => {
-          const show = (f === 'all') || it.classList.contains(f);
-          it.style.display = show ? '' : 'none';
-        });
-      });
-    });
-
-    // lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const closeBtn = document.getElementById('closeLightbox');
-
-    items.forEach(card => {
-      card.addEventListener('click', () => {
-        lightboxImg.src = card.dataset.src;
-        lightboxCaption.textContent = card.dataset.caption || '';
-        lightbox.classList.remove('hidden');
-        lightbox.classList.add('flex');
-      });
-    });
-
-    function closeLightbox(){
-      lightbox.classList.add('hidden');
-      lightbox.classList.remove('flex');
-      lightboxImg.src = '';
-    }
-    closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
+<footer class="py-8 text-center text-xs text-white/50">
+  © Josué Urioste · Pianista
+</footer>
 
 </body>
 </html>
