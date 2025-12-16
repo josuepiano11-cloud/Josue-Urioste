@@ -1,92 +1,93 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Josué Urioste · Pianista</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Josué Urioste · Pianista boliviano</title>
+  <meta name="description" content="Portafolio profesional de Josué Urioste: biografía, galería, distinciones y contacto." />
 
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    :root{
+      --wine:#8f1d2c;
+      --ink:#0b0b0c;
+      --line: rgba(255,255,255,.14);
+    }
+    html{ scroll-behavior:smooth; }
+    body{
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background-color: #0b0b0b;
+      background: var(--ink);
       color: #fff;
     }
-    .panel {
-      background-color: #8e1d2c; /* granate profesional */
-    }
-    .softline {
-      border-color: rgba(255,255,255,0.08);
-    }
+    h1,h2,h3{ font-family:"Playfair Display", serif; }
+    .panel{ background: var(--wine); }
+    .softline{ border-color: var(--line); }
   </style>
 </head>
 
 <body>
 
 <!-- MENÚ SUPERIOR -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b softline">
-  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-    <a href="#top" class="font-semibold tracking-tight">
-      Josué Urioste
-    </a>
-    <nav class="flex gap-6 text-sm tracking-wide text-white/80">
-      <a href="#biografia" class="hover:text-white">Biografía</a>
-      <a href="#galeria" class="hover:text-white">Galería</a>
-      <a href="#distinciones" class="hover:text-white">Distinciones</a>
-      <a href="#contacto" class="hover:text-white">Contacto</a>
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b softline">
+  <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
+    <a href="#top" class="font-semibold tracking-tight text-white">Josué Urioste</a>
+    <nav class="flex gap-6 text-xs sm:text-sm tracking-wide text-white/85">
+      <a href="#biografia" class="hover:underline">Biografía</a>
+      <a href="#galeria" class="hover:underline">Galería</a>
+      <a href="#distinciones" class="hover:underline">Distinciones</a>
+      <a href="#contacto" class="hover:underline">Contacto</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO / PORTADA -->
-<section id="top" class="min-h-[90vh] pt-16">
+<section id="top" class="min-h-[90vh] border-b softline">
   <div class="grid lg:grid-cols-2 min-h-[90vh]">
 
     <!-- Imagen -->
     <div class="relative min-h-[90vh]">
-      <img src="images/hero.jpg"
-           alt="Josué Urioste, pianista"
-           class="w-full h-[90vh] object-cover">
-      <div class="absolute inset-0 bg-black/30"></div>
+      <img src="images/hero.jpg" alt="Josué Urioste, pianista"
+           class="h-[90vh] w-full object-cover" />
+      <div class="absolute inset-0 bg-black/35"></div>
     </div>
 
-    <!-- Panel -->
-    <div class="panel relative flex flex-col px-8 py-12 lg:px-20 lg:py-24 min-h-[90vh]">
+    <!-- Panel granate -->
+    <div class="panel px-6 py-10 lg:px-16 lg:py-20 flex flex-col relative min-h-[90vh]">
 
       <!-- PORTAFOLIO -->
-      <p class="text-[11px] tracking-[0.45em] uppercase text-white/80 mb-8"
+      <p class="text-xs tracking-[0.45em] uppercase text-white/80 mb-6"
          style="font-family:'Playfair Display', serif;">
         Portafolio
       </p>
 
       <!-- NOMBRE -->
-      <h1 class="text-6xl lg:text-7xl leading-[1.05] font-semibold mb-6"
-          style="font-family:'Playfair Display', serif;">
+      <h1 class="text-6xl lg:text-7xl leading-[1] font-semibold mb-4">
         Josué<br>Urioste
       </h1>
 
-      <!-- Línea -->
-      <div class="w-56 h-px bg-white/70 mb-4"></div>
+      <!-- Línea superior -->
+      <div class="w-56 h-px bg-white/70 mb-3"></div>
 
-      <!-- Pianista -->
-      <p class="text-3xl lg:text-4xl font-medium tracking-wide text-white/95 mb-4">
+      <!-- PIANISTA -->
+      <p class="text-3xl lg:text-4xl font-medium tracking-wide text-white/95"
+         style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
         Pianista
       </p>
 
-      <div class="w-64 h-px bg-white/40"></div>
+      <!-- Línea inferior -->
+      <div class="w-64 h-px bg-white/40 mt-3"></div>
 
-      <!-- Datos -->
-      <div class="absolute bottom-10 left-20 space-y-2 text-sm text-white/85">
+      <!-- DATOS ABAJO -->
+      <div class="absolute bottom-8 left-16 space-y-1 text-sm text-white/85">
         <p>📞 +591 68637826</p>
         <p>
-          ✉️ <a href="mailto:josue.piano11@gmail.com" class="underline underline-offset-4">
+          ✉️ <a href="mailto:josue.piano11@gmail.com"
+                class="underline underline-offset-4">
             josue.piano11@gmail.com
           </a>
         </p>
@@ -103,50 +104,72 @@
   </div>
 </section>
 
-<!-- NAVEGACIÓN SECUNDARIA -->
-<section class="py-8">
-  <nav class="flex justify-center gap-10 text-sm tracking-wide text-white/80">
-    <a href="#biografia" class="hover:underline">Biografía</a>
-    <a href="#galeria" class="hover:underline">Galería</a>
-    <a href="#distinciones" class="hover:underline">Distinciones</a>
-    <a href="#contacto" class="hover:underline">Contacto</a>
-  </nav>
+<!-- NAVEGACIÓN SECUNDARIA (SIN BLANCO) -->
+<section class="bg-transparent border-b softline">
+  <div class="mx-auto max-w-6xl px-6 py-6">
+    <nav class="flex flex-wrap justify-center gap-8 text-sm tracking-wide text-white/90">
+      <a href="#biografia" class="hover:underline">Biografía</a>
+      <a href="#galeria" class="hover:underline">Galería</a>
+      <a href="#distinciones" class="hover:underline">Distinciones</a>
+      <a href="#contacto" class="hover:underline">Contacto</a>
+    </nav>
+  </div>
 </section>
 
 <!-- BIOGRAFÍA -->
-<section id="biografia" class="max-w-5xl mx-auto px-6 py-20">
+<section id="biografia" class="mx-auto max-w-5xl px-6 py-16">
   <h2 class="text-3xl font-semibold mb-6">Biografía</h2>
   <p class="text-white/80 leading-relaxed">
-    Pianista boliviano con formación académica, dedicado a la interpretación de la música
-    clásica, la música de cámara y la difusión del repertorio latinoamericano y boliviano.
-    Su labor artística se complementa con una activa actividad pedagógica.
+    Pianista boliviano con formación académica, dedicado a la interpretación de la música clásica,
+    la música de cámara y la difusión del repertorio latinoamericano y boliviano. Su trabajo combina
+    la actividad concertística con la pedagogía pianística.
   </p>
 </section>
 
 <!-- GALERÍA -->
-<section id="galeria" class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-semibold mb-10">Galería</h2>
-  <p class="text-white/70">[Aquí irán tus fotografías]</p>
+<section id="galeria" class="mx-auto max-w-6xl px-6 py-16 border-t softline">
+  <h2 class="text-3xl font-semibold mb-8">Galería</h2>
+  <p class="text-white/70 mb-6">Aquí añadiremos tus fotos (conciertos, concursos, docencia, etc.).</p>
+
+  <!-- Placeholder simple (luego lo cambiamos por tus 10 fotos reales) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+    <div class="h-48 rounded-lg bg-white/5 border softline"></div>
+  </div>
 </section>
 
 <!-- DISTINCIONES -->
-<section id="distinciones" class="max-w-5xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-semibold mb-6">Distinciones</h2>
-  <p class="text-white/70">[Premios, menciones, reconocimientos]</p>
+<section id="distinciones" class="mx-auto max-w-5xl px-6 py-16 border-t softline">
+  <h2 class="text-3xl font-semibold mb-8">Distinciones</h2>
+  <ul class="space-y-2 text-white/80">
+    <li><strong>2019:</strong> Primer lugar, Concurso de Piano “Eduardo Caba” – Sucre.</li>
+    <li><strong>2019:</strong> Primer lugar, Categoría Juvenil, Festival Nacional de Piano “Hernán Rivera Unzueta”.</li>
+    <li><strong>2020:</strong> Primer lugar, Categoría Juvenil (versión virtual).</li>
+    <li><strong>2021:</strong> Segundo lugar, Categoría Mayores, Festival Nacional de Piano.</li>
+    <li><strong>2022:</strong> Reconocimiento UMSS por compromiso y disciplina artística.</li>
+    <li><strong>2023:</strong> Seleccionado como joven promesa del Festival “Música para Respirar” – Sucre.</li>
+    <li><strong>2024:</strong> Mención de Honor y Finalista, Concurso Internacional “Pianistas Jóvenes” – Colombia.</li>
+  </ul>
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="max-w-5xl mx-auto px-6 py-20">
+<section id="contacto" class="mx-auto max-w-5xl px-6 py-16 border-t softline">
   <h2 class="text-3xl font-semibold mb-6">Contacto</h2>
-  <p class="text-white/70">
-    Para conciertos, proyectos artísticos o colaboraciones:
-    <br><br>
-    ✉️ <a href="mailto:josue.piano11@gmail.com" class="underline">josue.piano11@gmail.com</a>
-  </p>
+  <div class="text-white/80 space-y-2">
+    <p>📞 +591 68637826</p>
+    <p>✉️ <a class="underline underline-offset-4" href="mailto:josue.piano11@gmail.com">josue.piano11@gmail.com</a></p>
+    <p>🌐 <a class="underline underline-offset-4" target="_blank" href="https://josuepiano11-cloud.github.io/Josue-Urioste/">josuepiano11-cloud.github.io/Josue-Urioste</a></p>
+  </div>
 </section>
 
-<footer class="py-8 text-center text-xs text-white/50">
-  © Josué Urioste · Pianista
+<footer class="border-t softline">
+  <div class="mx-auto max-w-6xl px-6 py-10 text-center text-xs text-white/60">
+    © Josué Urioste · Pianista
+  </div>
 </footer>
 
 </body>
