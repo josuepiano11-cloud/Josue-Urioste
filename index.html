@@ -39,46 +39,63 @@
 
 <body>
 
-<!-- HERO / PORTADA -->
-<section id="top" class="min-h-[80vh] border-b softline">
-  <div class="grid lg:grid-cols-2">
-
-    <!-- Imagen -->
-    <div class="relative">
-      <img src="images/hero.jpg" alt="Josué Urioste, pianista"
-           class="h-[80vh] w-full object-cover" />
-      <div class="absolute inset-0 bg-black/35"></div>
+  <!-- NAV simple (dossier style) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur border-b softline">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight">Josué Urioste</a>
+      <nav class="hidden md:flex gap-6 text-xs tracking-[0.2em] uppercase text-white/80">
+        <a href="#bio" class="hover:text-white">Biografía</a>
+        <a href="#destacados" class="hover:text-white">Destacados</a>
+        <a href="#galeria" class="hover:text-white">Galería</a>
+        <a href="#trayectoria" class="hover:text-white">Trayectoria</a>
+        <a href="#premios" class="hover:text-white">Premios</a>
+        <a href="#contacto" class="hover:text-white">Contacto</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Panel granate -->
-    <div class="panel px-6 py-10 lg:px-14 lg:py-16 flex flex-col justify-center">
-      <p class="text-xs tracking-[0.3em] uppercase text-white/80">
-        Portafolio
-      </p>
+  <!-- HERO / PORTADA -->
+  <section id="top" class="min-h-[80vh] border-b softline pt-16">
+    <div class="grid lg:grid-cols-2">
 
-      <h1 class="mt-4 text-5xl lg:text-6xl leading-[1.05] font-semibold">
-        Josué<br>Urioste
-      </h1>
-
-      <div class="mt-6 h-px w-24 bg-white/70"></div>
-
-      <p class="mt-6 text-base leading-relaxed text-white/90 max-w-xl">
-        Pianista con formación académica, dedicado a la interpretación de la música clásica,
-        la música de cámara y la difusión del repertorio latinoamericano, incluyendo la música
-        boliviana, boleros y tangos. Su trabajo combina la actividad concertística con la
-        pedagogía pianística.
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-2 text-xs">
-        <span class="tag rounded-full px-3 py-1">Música clásica</span>
-        <span class="tag rounded-full px-3 py-1">Música de cámara</span>
-        <span class="tag rounded-full px-3 py-1">Repertorio latinoamericano</span>
-        <span class="tag rounded-full px-3 py-1">Docencia</span>
+      <!-- Imagen -->
+      <div class="relative">
+        <img src="images/hero.jpg"
+             alt="Josué Urioste, pianista"
+             class="h-[80vh] w-full object-cover" />
+        <div class="absolute inset-0 bg-black/35"></div>
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- Panel granate -->
+      <div class="panel px-6 py-10 lg:px-14 lg:py-16 flex flex-col justify-center">
+        <p class="text-xs tracking-[0.3em] uppercase text-white/80">
+          Portafolio
+        </p>
+
+        <h1 class="mt-4 text-5xl lg:text-6xl leading-[1.05] font-semibold">
+          Josué<br>Urioste
+        </h1>
+
+        <div class="mt-6 h-px w-24 bg-white/70"></div>
+
+        <p class="mt-6 text-base leading-relaxed text-white/90 max-w-xl">
+          Pianista con formación académica, dedicado a la interpretación de la música clásica,
+          la música de cámara y la difusión del repertorio latinoamericano, incluyendo la música
+          boliviana, boleros y tangos. Su trabajo combina la actividad concertística con la
+          pedagogía pianística.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-2 text-xs">
+          <span class="tag rounded-full px-3 py-1">Música clásica</span>
+          <span class="tag rounded-full px-3 py-1">Música de cámara</span>
+          <span class="tag rounded-full px-3 py-1">Repertorio latinoamericano</span>
+          <span class="tag rounded-full px-3 py-1">Docencia</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
 
 
